@@ -1,2 +1,1 @@
-# I am Edward! 
-# This is my website. 
+# A website created for Special Ops Diabolo, a professional Performance Team. 
