@@ -1,4 +1,25 @@
 {
-  "name": "application-name",
-  "version": "0.0.1"
+  "name": "special_ops",
+  "version": "0.0.1",
+  "description": "Special Ops' Website",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "node": "^0.0.0",
+    "supervisor": "^0.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elusive7/special_ops.git"
+  },
+  "author": "elusive7",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elusive7/special_ops/issues"
+  },
+  "homepage": "https://github.com/elusive7/special_ops#readme"
 }
