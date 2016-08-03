@@ -1,2 +1,0 @@
-# Ignore some stuff
-*node_modules/
