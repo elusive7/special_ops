@@ -10,7 +10,6 @@ app.get('/', function (req, res) {
 
 app.use(express.static(__dirname + '/'));
 
-
 app.listen(3000, function () {
     console.log('Spec Ops on port 3000!');
 });
