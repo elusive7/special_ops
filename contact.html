@@ -1,3 +1,5 @@
+<!-- Created by Elusive7 on 7/14/2016 -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,14 +47,17 @@
                     <li>
                         <a href="contact.html">Contact</a>
                     </li>
+                    <li>
+                        <a href="media.html">Media</a>
+                    </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Special Ops <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> About <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="gallery.html">Artists</a>
                             </li>
                             <li>
-                                <a href="performances.html">Performances</a>
+                                <a href="performances.html">Appearances</a>
                             </li>
                         </ul>
                     </li>
@@ -92,10 +97,10 @@
                 <div class="col-lg-12">
                     <h2 class="page-header">Book us today!</h2>
                 </div>
-
+                <a id = "bot">
                 <!-- Seattle -->
                 <div class="col-md-4 col-sm-6">
-                    <a href="gallery.html#anchor">
+                    <a href="gallery.html#bot">
                         <img class="img-responsive img-portfolio img-hover" src="http://farm9.staticflickr.com/8146/6958040972_de2d559290_c.jpg" alt="">
                     </a>
                     <center>
@@ -103,40 +108,39 @@
                     <p>
                         Jason Pao
                     </p>
-                    <p><i class="fa fa-phone"></i>
-                        <abbr title="Phone">P</abbr>: 978-844-6753</p>
+                    <!-- <p><i class="fa fa-phone"></i>
+                        <abbr title="Phone">P</abbr>: 978-844-6753</p>-->
                     <p><i class="fa fa-envelope-o"></i>
-                        <abbr title="Email">E</abbr>: <a href="mailto:name@example.com">jason.yh.pao@gmail.com</a>
+                        <abbr title="Email"></abbr>: <a href="mailto:jason.yh.pao@gmail.com">jason.yh.pao@gmail.com</a>
                     </p>
+                        <a href="https://www.instagram.com/yoyoonarock/"><i class="fa fa-camera-retro fa-2x"></i></a>
 
                     </center>
                 </div>
 
                 <!-- Chicago -->
-                <div class="col-md-4 col-sm-6">
+                    <div class="col-md-4 col-sm-6">
 
-                    <a href="gallery.html#MIDDLE">
-                        <img class="img-responsive img-portfolio img-hover" src="http://www.usatipps.de/wp-content/uploads/2012/06/chicago.jpg" alt="">
-                    </a>
-                    <center>
-                    <h3>Chicago, IL</h3>
-                    <p>
-                        Edward Lu
-                    </p>
-                    <p><i class="fa fa-phone"></i>
-                        <abbr title="Phone">P</abbr>: 732-895-8345</p>
-                    <p><i class="fa fa-envelope-o"></i>
-                        <abbr title="Email">E</abbr>: <a href="mailto:name@example.com">elu3@illinois.edu</a>
-                    </p>
+                        <a href="gallery.html#MIDDLE">
+                            <img class="img-responsive img-portfolio img-hover" src="http://www.usatipps.de/wp-content/uploads/2012/06/chicago.jpg" alt="">
+                        </a>
+                        <center>
+                            <h3>Chicago, IL</h3>
+                            <p>
+                                Eddie Lu
+                            </p>
+                            <!-- <p><i class="fa fa-phone"></i>
+                                <abbr title="Phone">P</abbr>: 732-895-8345</p> -->
+                            <p><i class="fa fa-envelope-o"></i>
+                                <abbr title="Email"></abbr>: <a href="elu3@illinois.edu">elu3@illinois.edu</a>
+                            </p>
 
-                    <a href="http://www.facebook.com/uiucspecops"><i class="fa fa-facebook-square fa-2x"></i></a>
+                            <a href="https://www.instagram.com/mreddie187/"><i class="fa fa-camera-retro fa-2x"></i></a>
 
-                    <a href="https://www.instagram.com/mreddie187/"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                        </center>
+                    </div>
 
-                    <a href="https://twitter.com/bert_7ent"><i class="fa fa-twitter-square fa-2x"></i></a>
 
-                    </center>
-                </div>
 
                 <!-- Champaign -->
                 <div class="col-md-4 col-sm-6">
@@ -146,15 +150,18 @@
                         <img class="img-responsive img-portfolio img-hover" src="http://greenbillion.org/wp-content/uploads/2015/06/almanight-487x324.jpg" alt="">
                     </a>
                     <center>
+
                     <h3>Champaign, IL</h3>
                     <p>
-                        Philip Shih
+                        Phillip Shih
                     </p>
-                    <p><i class="fa fa-phone"></i>
-                        <abbr title="Phone">P</abbr>: 224-558-6852</p>
+                    <!--<p><i class="fa fa-phone"></i>
+                        <abbr title="Phone">P</abbr>: 224-558-6852</p>-->
                     <p><i class="fa fa-envelope-o"></i>
-                        <abbr title="Email">E</abbr>: <a href="mailto:name@example.com">philshih95@gmail.com</a>
+                        <abbr title="Email"></abbr>: <a href="uiuc.tasc.specialops@gmail.com">uiuc.tasc.specialops@gmail.com</a>
                     </p>
+                        <a href="https://www.instagram.com/tascuiuc/"><i class="fa fa-camera-retro fa-2x"></i></a>
+
                     </center>
                 </div>
             </div>
@@ -162,6 +169,33 @@
 
         <!-- Contact Form -->
         <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+            <?php
+                // check if fields passed are empty
+                if(empty($_POST['name'])  		||
+                   empty($_POST['phone']) 		||
+                   empty($_POST['email']) 		||
+                   empty($_POST['message'])	||
+                   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
+                   {
+                    echo "No arguments Provided!";
+                    return false;
+                   }
+
+                $name = $_POST['name'];
+                $phone = $_POST['phone'];
+                $email_address = $_POST['email'];
+                $message = $_POST['message'];
+
+                // create email body and send it
+                $to = 'uiuc.tasc.specialops@gmail.com';
+                $email_subject = "Performance Request From: $name";
+                $email_body = "Hi, you have received a new message from Special Ops' Website!\n\n"."Here is their contact information:\n\nName: $name\n\nPhone: $phone\n\nEmail: $email_address\n\nMessage:\n$message";
+                $headers = "From: $email\n";
+                $headers .= "Reply-To: $email_address";
+                mail($to,$email_subject,$email_body,$headers);
+                return true;
+            ?>
+        <!--
         <div class="row">
             <div class="col-md-8">
                 <h3>Send us a Message!</h3>
@@ -192,19 +226,19 @@
                         </div>
                     </div>
                     <div id="success"></div>
-                    <!-- For success/fail messages -->
+
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
-
         </div>
         <hr>
+        -->
 
         <!-- Footer -->
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Special Ops Diabolo 2016</p>
+                    <p>Copyright &copy; TASC Special Ops 2016</p>
                 </div>
             </div>
         </footer>

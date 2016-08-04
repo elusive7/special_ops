@@ -19,7 +19,7 @@ $message = $_POST['message'];
 $to = 'uiuc.tasc.specialops@gmail.com'; 
 $email_subject = "Performance Request From: $name"; 
 $email_body = "Hi, you have received a new message from Special Ops' Website!\n\n"."Here is their contact information:\n\nName: $name\n\nPhone: $phone\n\nEmail: $email_address\n\nMessage:\n$message";
-$headers = "From: uiuc.tasc.specialops@gmail.com\n";
+$headers = "From: $email\n";
 $headers .= "Reply-To: $email_address";	
 mail($to,$email_subject,$email_body,$headers);
 return true;			
